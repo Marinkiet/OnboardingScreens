@@ -4,23 +4,30 @@ import FontAwesome6 from 'react-native-vector-icons/FontAwesome6'
 import RightIconFilledButton from '../components/Buttons/RightIconFilledButton'
 import ClearButton from '../components/ClearButton'
 import onBoardinfSteps from '../constants/data';
-
+import Details from './Details'
+import { useNavigation } from '@react-navigation/native';
 const Home = () => {
 
+
     const [screenIndex, setScreenIndex] = useState(0);
-
     const data = onBoardinfSteps[screenIndex];
-
+    const navigation = useNavigation();
     const onContinue = () => {
         //console.warn("Continue on...")
         const isLastScreen = screenIndex===onBoardinfSteps.length-1;
         if(isLastScreen){
-            setScreenIndex(0);
-            //navigate to all details
+            endOnboardingIntro();
         }else{
             setScreenIndex(screenIndex+1)
 
         }
+    }
+
+    const endOnboardingIntro=()=>{
+        setScreenIndex(0);
+        navigation.navigate('Details')
+        // console.warn("End of onboarding intro")
+        //navigate to actual details screen
     }
 
     return (
@@ -35,9 +42,8 @@ const Home = () => {
             </View>
 
             <View style={styles.homeButtonsContainer}>
-                <Pressable>
+                <Pressable onPress={endOnboardingIntro}>
                    <ClearButton text="Skip" btnWidth={100} />
-                       
                 </Pressable>
 
                 <Pressable onPress={onContinue}>
