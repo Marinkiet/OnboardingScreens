@@ -25,13 +25,23 @@ const Home = () => {
 
     const endOnboardingIntro=()=>{
         setScreenIndex(0);
-        navigation.navigate('Details')
+        // navigation.navigate('Details');
         // console.warn("End of onboarding intro")
         //navigate to actual details screen
     }
 
     return (
         <SafeAreaView style={styles.page}>
+            <View style={styles.stepIdecatorContainer}>
+                {
+                    onBoardinfSteps.map((step,index)=>(
+                        <View key={index} style={[styles.stepIndecator,{backgroundColor:index===screenIndex?"#8dd5aa":"gray"}]} ></View>
+                       
+                    ))
+                  
+                }
+            
+            </View>
             <View style={styles.iconContainer}>
                 <FontAwesome6 style={styles.image} name={data.icon} size={100} color='#8dd5aa' />
             </View>
@@ -73,6 +83,21 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#07101e',
 
+    },
+    stepIdecatorContainer:{
+        flexDirection:'row',
+        paddingHorizontal:5,
+        marginTop:5,
+        alignItems:'center',
+        justifyContent:'center'
+    },
+    stepIndecator:{
+        flex:1,
+        borderRadius:10,
+        height:3,
+        backgroundColor:'gray',
+        marginHorizontal:3,
+        marginTop:10
     },
     iconContainer: {
         flex: 3,

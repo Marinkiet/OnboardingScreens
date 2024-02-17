@@ -22,6 +22,12 @@ const onBoardinfSteps=[
         title:'Track every 5',
         description:'Take control of your finances with ease,empowering you to track every transaction with clarity.'
        
+    },
+    {
+        icon:'plane',
+        title:'Track every 6',
+        description:'Take control of your finances with ease,empowering you to track every transaction with clarity.'
+       
     }
 ]
 
