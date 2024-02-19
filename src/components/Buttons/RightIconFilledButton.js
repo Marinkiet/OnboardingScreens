@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     alignItems:'center',
     // width:btnWidth,
     // height:btnHeight,
-    backgroundColor:'#8dd5aa',
+    backgroundColor:'#ffd503',
     borderRadius:40,
     flexDirection:'row',
     // paddingHorizontal:20

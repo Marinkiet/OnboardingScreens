@@ -1,33 +1,33 @@
 const onBoardinfSteps=[
     {
-        icon:'money-bill-transfer',
-        title:'Track every transaction',
-        description:'Take control of your finances with ease,empowering you to track every transaction with clarity.'
+        icon:'seedling',
+        title:'Get Pin-spired with Pineapple!',
+        description:"We're not prickly about culture, values, or connecting with your new pineapples (colleagues, obvs)."
        
     },
     {
-        icon:'heart',
-        title:'Track every 3',
-        description:'Take control of your finances with ease,empowering you to track every transaction with clarity.'
+        icon:'rocket',
+        title:"Gear Up & Don't Be a Melon-choly",
+        description:"Benefits, training, resources – all in our app, so you won't feel like a lost frond in the jungle."
        
     },
     {
-        icon:'snowflake',
-        title:'Track every 4',
-        description:'Take control of your finances with ease,empowering you to track every transaction with clarity.'
+        icon:'compass',
+        title:"Smooth Transition? Sounds Like a Fairytale, But We'll Try!",
+        description:'Find contacts, schedule meetings, get support – basically, everything to avoid a pineapple upside-down desk situation.🆘'
        
     },
     {
-        icon:'heart',
-        title:'Track every 5',
-        description:'Take control of your finances with ease,empowering you to track every transaction with clarity.'
+        icon:'people-carry-box',
+        title:'Your Pineappal Buddy: Ask Away, No Need to Be Shy!',
+        description:"Track progress, ask questions, flourish. Just don't go all ' on steroids' – we like balance here."
        
     },
     {
-        icon:'plane',
-        title:'Track every 6',
-        description:'Take control of your finances with ease,empowering you to track every transaction with clarity.'
-       
+        icon:'comments',
+        title:'Connect & Grow: From Sprouts to Superfruit with Pineapple!',
+        description:"Join groups, connect, have fun – it's not all work and no play (unless you're in fruit salad sales, then maybe)."
+        
     }
 ]
 
