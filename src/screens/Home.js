@@ -7,7 +7,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import FilledButton from '../components/Buttons/FilledButton'
 import AlphaCard from '../components/AlphaCard'
-import BetaBox from '../components/BetaBox'
+import BetaBox from '../components/Boxes/BetaBox'
 
 const green="#67c9d0";
 yellow="#ffd503"
