@@ -2,9 +2,8 @@ import { StyleSheet, Text, View } from 'react-native'
 import React, { useState } from 'react'
 import Feather from 'react-native-vector-icons/Feather'
 import AntDesign from 'react-native-vector-icons/AntDesign'
-import FilledButton from './Buttons/FilledButton';
-import BetaBox from './BetaBox';
-import CharlieBox from './CharlieBox';
+import BetaBox from './Boxes/BetaBox';
+import CharlieBox from './Boxes/CharlieBox';
 
 const green = "#67c9d0";
 const yellow = "#ffd503";
@@ -23,17 +22,24 @@ const AlphaCard = (props) => {
             </View>
             {/* ActionCompont */}
             <View style={styles.warningsConatainer}>
-                <AntDesign name="warning" color="red" size={20} />
-                <AntDesign name="exclamationcircleo" color="orange" size={20} />
+                <View style={styles.warningsWrapper}>
+                    <AntDesign name="warning" color="red" size={20} />
+                    <Text style={styles.warningText}>1</Text>
+                </View>
+                <View style={styles.warningsWrapper}>
+                    <AntDesign name="exclamationcircleo" color="orange" size={20} />
+                    <Text style={styles.warningText}>0</Text>
+                </View>
+
 
             </View>
             {/* BetaCardComponent */}
             {
-                props.boxType=="beta"?(<BetaBox/>):
-                props.boxType=="charlie"?(<CharlieBox/>):
-                (<></>)
+                props.boxType == "beta" ? (<BetaBox />) :
+                    props.boxType == "charlie" ? (<CharlieBox />) :
+                        (<></>)
             }
-           
+
         </View>
     )
 }
@@ -78,5 +84,16 @@ const styles = StyleSheet.create({
         paddingLeft: 20,
         // backgroundColor:'pink',
         gap: 30
+    },
+    warningsWrapper:{
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'center',
+        
+    },
+    warningText:{
+        fontWeight:'600',
+        fontSize:18,
+        paddingHorizontal:5
     }
 })
