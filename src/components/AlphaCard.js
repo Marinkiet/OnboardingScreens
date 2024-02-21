@@ -1,13 +1,15 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import Feather from 'react-native-vector-icons/Feather'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import FilledButton from './Buttons/FilledButton';
 import BetaBox from './BetaBox';
+import CharlieBox from './CharlieBox';
 
 const green = "#67c9d0";
 const yellow = "#ffd503";
 const AlphaCard = (props) => {
+
     return (
         <View style={styles.container}>
             {/* header text icon */}
@@ -26,7 +28,12 @@ const AlphaCard = (props) => {
 
             </View>
             {/* BetaCardComponent */}
-           <BetaBox/>
+            {
+                props.boxType=="beta"?(<BetaBox/>):
+                props.boxType=="charlie"?(<CharlieBox/>):
+                (<></>)
+            }
+           
         </View>
     )
 }
