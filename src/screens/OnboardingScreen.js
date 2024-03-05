@@ -71,14 +71,16 @@ const OnboardingScreen = () => {
               
             }
 
-                <TouchableOpacity onPress={onContinue}>
-                    <View>
+                <TouchableOpacity onPress={onContinue} >
+                    <View >
                         {
                             screenIndex === 0 ? (
                                 <RightIconFilledButton text="Start" btnHeight={50} btnWidth={250} />
                             )
                              : screenIndex === onBoardinfSteps.length - 1 ? (
-                                <FilledButton text="Get Started" btnHeight={50} btnWidth={370} />
+                      
+                                    <FilledButton text="Get Started" btnHeight={50} btnWidth={350} />
+                                 
                             )
                              : (
                                 <RightIconFilledButton text="Continue" btnHeight={50} btnWidth={250} />
@@ -134,11 +136,11 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'space-between',
         paddingHorizontal: 10,
         // borderTopRightRadius:30,
         // borderTopLeftRadius:30,
         // backgroundColor:'red',
+        justifyContent: 'center',
     },
     image: {
 
@@ -156,5 +158,11 @@ const styles = StyleSheet.create({
         color: "white",
         letterSpacing: 1,
         lineHeight: 25
+    },
+    bottomButtom:{
+        alignItems:'center',
+        justifyContent:'center',
+        backgroundColor:'pink'
+
     }
 })
