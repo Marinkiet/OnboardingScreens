@@ -1,5 +1,9 @@
 import { StyleSheet, Text, View } from 'react-native'
 
+const primaryGrey = "#808080";
+const secondaryGrey = "#999aa3";
+const primaryPurple = "#a36cec";
+const secondaryPurple = "#4d5066";
 const FilledButton = (props) => {
   return (
     <View
@@ -15,11 +19,11 @@ const styles = StyleSheet.create({
   button: {
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#ffd503',
+    backgroundColor: secondaryPurple,
     borderRadius: 40
   },
   buttonText: {
     fontSize: 20,
-    color: "#07101e",
+    color: "white"
   },
 })

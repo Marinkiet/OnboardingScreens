@@ -5,8 +5,10 @@ import AntDesign from 'react-native-vector-icons/AntDesign'
 import BetaBox from './Boxes/BetaBox';
 import CharlieBox from './Boxes/CharlieBox';
 
-const green = "#67c9d0";
-const yellow = "#ffd503";
+const primaryGrey = "#808080";
+const secondaryGrey = "#999aa3";
+const primaryPurple = "#a36cec";
+const secondaryPurple = "#4d5066";
 const AlphaCard = (props) => {
 
     return (
@@ -51,7 +53,7 @@ const styles = StyleSheet.create({
         // flex: 1,
         height: 250,
         width: '100%',
-        backgroundColor: 'white',
+        backgroundColor: primaryGrey,
         borderRadius: 30,
         padding: 5,
         marginBottom: 5,
@@ -67,10 +69,11 @@ const styles = StyleSheet.create({
     },
     headerText: {
         fontSize: 20,
-        fontWeight: '600'
+        fontWeight: '600',
+        color:"white"
     },
     headerIconContainer: {
-        backgroundColor: green,
+        backgroundColor: secondaryPurple,
         padding: 10,
         width: 60,
         height: 60,

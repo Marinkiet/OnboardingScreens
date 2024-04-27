@@ -2,13 +2,16 @@ import { StyleSheet, Text, View } from 'react-native'
 import React, { Children } from 'react'
 import Entypo from 'react-native-vector-icons/Entypo'
 
-
+const primaryGrey = "#808080";
+const secondaryGrey = "#999aa3";
+const primaryPurple = "#a36cec";
+const secondaryPurple = "#4d5066";
 const RightIconFilledButton = (props) => {
   return (
     <View 
     style={[styles.button,{width:props.btnWidth||60,height:props.btnHeight ||50}]}>
         <Text style={styles.buttonText}>{props.text}</Text>
-        <Entypo style={styles.buttonIcon}name="chevron-thin-right" size={17} color="#07101e"/>
+        <Entypo style={styles.buttonIcon}name="chevron-thin-right" size={17} color="white"/>
     </View>
   )
 }
@@ -20,7 +23,7 @@ const styles = StyleSheet.create({
     alignItems:'center',
     // width:btnWidth,
     // height:btnHeight,
-    backgroundColor:'#ffd503',
+    backgroundColor:secondaryPurple,
     borderRadius:40,
     flexDirection:'row',
     // paddingHorizontal:20
@@ -29,7 +32,7 @@ const styles = StyleSheet.create({
 buttonText:{
     flex:1,
     fontSize:20,
-    color:"#07101e",
+    color:"white",
     textAlign:'center',
     fontWeight:'400'
 },

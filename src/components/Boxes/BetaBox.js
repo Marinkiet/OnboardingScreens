@@ -1,6 +1,13 @@
 import { Pressable,TouchableOpacity, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import FilledButton from '../Buttons/FilledButton'
+
+
+const primaryGrey = "#808080";
+const secondaryGrey = "#999aa3";
+const primaryPurple = "#a36cec";
+const secondaryPurple = "#4d5066";
+const backgroundGrey= "#f5f4ff2b";
 const BetaBox = () => {
   return (
     <View style={styles.boxContainer}>
@@ -23,7 +30,7 @@ export default BetaBox
 const styles = StyleSheet.create({
 
     boxContainer: {
-        backgroundColor: '#f0f0f0',
+        backgroundColor: backgroundGrey,
         width: '90%',
         height: '55%',
         borderRadius:25,
@@ -40,12 +47,14 @@ const styles = StyleSheet.create({
     boxTextTitle:{
         fontWeight:'500',
         marginLeft:35,
-        fontSize:14
+        fontSize:14,
+        color:"white"
 
 
     },
     boxText: {
         fontSize: 30,
-        fontWeight: '500'
+        fontWeight: '500',
+        color:"white"
     }
 })

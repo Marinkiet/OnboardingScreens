@@ -1,7 +1,10 @@
 import { StyleSheet, Text, View,Pressable } from 'react-native'
 import React from 'react'
 
-
+const primaryGrey = "#808080";
+const secondaryGrey = "#999aa3";
+const primaryPurple = "#a36cec";
+const secondaryPurple = "#4d5066";
 
 const ClearButton = (props) => {
   return (
@@ -22,6 +25,6 @@ const styles = StyleSheet.create({
 },
 buttonText:{
     fontSize:20,
-    color:'#ffd503'
+    color:secondaryPurple
 },
 })

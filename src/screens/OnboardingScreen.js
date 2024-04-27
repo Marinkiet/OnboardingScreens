@@ -6,12 +6,15 @@ import ClearButton from '../components/Buttons/ClearButton'
 import onBoardinfSteps from '../constants/data';
 import { useNavigation } from '@react-navigation/native';
 import Animated, { BounceIn, BounceOut, BounceOutRight, SlideOutRight } from 'react-native-reanimated';
-import { FadeIn, FadeOut,SlideInLeft ,BounceInRight} from 'react-native-reanimated';
+import { FadeIn, FadeOut, SlideInLeft, BounceInRight } from 'react-native-reanimated';
 import FilledButton from '../components/Buttons/FilledButton'
 
 
-const yellow="";
-const green="";
+const primaryGrey = "#808080";
+const secondaryGrey = "#999aa3";
+const primaryPurple = "#a36cec";
+const secondaryPurple = "#4d5066";
+const backgroundGrey = "#f5f4ff2b";
 const OnboardingScreen = () => {
 
     const [screenIndex, setScreenIndex] = useState(0);
@@ -40,36 +43,36 @@ const OnboardingScreen = () => {
             <View style={styles.stepIdecatorContainer}>
                 {
                     onBoardinfSteps.map((step, index) => (
-                        <View key={index} style={[styles.stepIndecator, { backgroundColor: index === screenIndex ? "#ffd503" : "gray" }]} ></View>
+                        <View key={index} style={[styles.stepIndecator, { backgroundColor: index === screenIndex ? primaryPurple : secondaryPurple }]} ></View>
 
                     ))
 
                 }
 
             </View>
-            <Animated.View  entering={FadeIn.duration(2000)} key={screenIndex} style={styles.bodyContainer}>
+            <Animated.View entering={FadeIn.duration(2000)} key={screenIndex} style={styles.bodyContainer}>
                 <Animated.View entering={SlideInLeft.duration(1000)} exiting={SlideOutRight.duration(1000)} style={styles.iconContainer}>
-                    <FontAwesome6 style={styles.image} name={data.icon} size={100} color='#ffd503' />
+                    <FontAwesome6 style={styles.image} name={data.icon} size={100} color={primaryPurple} />
                 </Animated.View>
 
                 <View style={styles.bodyContainer}>
-                    <Animated.Text entering={SlideInLeft.delay(400).duration(1000)} exiting={SlideOutRight.duration(1000)}style={styles.title}>{data.title}</Animated.Text>
-                    <Animated.Text entering={SlideInLeft.delay(1000).duration(700)} exiting={SlideOutRight.duration(1000)}style={styles.description}>{data.description}</Animated.Text>
+                    <Animated.Text entering={SlideInLeft.delay(400).duration(1000)} exiting={SlideOutRight.duration(1000)} style={styles.title}>{data.title}</Animated.Text>
+                    <Animated.Text entering={SlideInLeft.delay(1000).duration(700)} exiting={SlideOutRight.duration(1000)} style={styles.description}>{data.description}</Animated.Text>
                 </View>
             </Animated.View>
 
 
             <View style={styles.homeButtonsContainer}>
-            {
-                            screenIndex < onBoardinfSteps.length-1 ?(
-                                <TouchableOpacity onPress={endOnboardingIntro}>
-                                <ClearButton text="Skip" btnWidth={100} />
-                            </TouchableOpacity>
-                            ):(
-                                <></>
-                            )
-              
-            }
+                {
+                    screenIndex < onBoardinfSteps.length - 1 ? (
+                        <TouchableOpacity onPress={endOnboardingIntro}>
+                            <ClearButton text="Skip" btnWidth={100} />
+                        </TouchableOpacity>
+                    ) : (
+                        <></>
+                    )
+
+                }
 
                 <TouchableOpacity onPress={onContinue} >
                     <View >
@@ -77,14 +80,14 @@ const OnboardingScreen = () => {
                             screenIndex === 0 ? (
                                 <RightIconFilledButton text="Start" btnHeight={50} btnWidth={250} />
                             )
-                             : screenIndex === onBoardinfSteps.length - 1 ? (
-                      
+                                : screenIndex === onBoardinfSteps.length - 1 ? (
+
                                     <FilledButton text="Get Started" btnHeight={50} btnWidth={350} />
-                                 
-                            )
-                             : (
-                                <RightIconFilledButton text="Continue" btnHeight={50} btnWidth={250} />
-                            )
+
+                                )
+                                    : (
+                                        <RightIconFilledButton text="Continue" btnHeight={50} btnWidth={250} />
+                                    )
                         }
                     </View>
                 </TouchableOpacity>
@@ -102,7 +105,7 @@ export default OnboardingScreen
 const styles = StyleSheet.create({
     page: {
         flex: 1,
-        backgroundColor: '#67c9d0',
+        backgroundColor: backgroundGrey,
     },
     stepIdecatorContainer: {
         flexDirection: 'row',
@@ -129,7 +132,7 @@ const styles = StyleSheet.create({
     bodyContainer: {
         flex: 5,
         justifyContent: 'flex-end',
-        padding:10
+        padding: 10
 
     },
     homeButtonsContainer: {
@@ -155,14 +158,14 @@ const styles = StyleSheet.create({
     description: {
         marginTop: '3%',
         fontSize: 18,
-        color: "white",
+        color: secondaryPurple,
         letterSpacing: 1,
         lineHeight: 25
     },
-    bottomButtom:{
-        alignItems:'center',
-        justifyContent:'center',
-        backgroundColor:'pink'
+    bottomButtom: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: 'pink'
 
     }
 })
